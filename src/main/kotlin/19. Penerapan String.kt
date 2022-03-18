@@ -12,9 +12,13 @@ fun main(args: Array<String>) {
     val consonants = "bcdfghjklmnpqrstvwxz"
     // main loop
     for (c in s) {
-        if (vowels.contains(c)) {
+        val any = if (vowels.contains(c)) {
             vowelCount++
         } else if (consonants.contains(c)) {
             consonantCount++
         }
     }
+    println("Vowels: $vowelCount")
+    println("Consonants: $consonantCount")
+    println("Other characters: ${s.length - (vowelCount + consonantCount)}")
+}
